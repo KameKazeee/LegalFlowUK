@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Wizard V2 RTL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+	
+	<div class="clearfix"></div>
+	<div class="wrapper clearfix">
+		<div class="wizard-part-title">
+			<h3> قم بترقية حسابك</h3>
+		</div>
+		<!--multisteps-form-->
+		<div class="multisteps-form">
+			<!--progress bar-->
+			<div class="row">
+				<div class="col-12 col-lg-12 ml-auto mr-auto mb-5 mt-5">
+
+					<div class="multisteps-form__progress">
+						<button class="multisteps-form__progress-btn js-active" title="بيانات الطلب">بيانات الطلب</button>
+						<button class="multisteps-form__progress-btn" title="الإقامة الضريبية">الإقامة الضريبية</button>
+						<button class="multisteps-form__progress-btn" title="وثائق المسافة البادئة">البطاقة الشخصية</button>
+						<button class="multisteps-form__progress-btn" title="قابلية الاستثمار">قابلية الاستثمار </button>
+						<button class="multisteps-form__progress-btn" title="مراجعة">مراجعة </button>
+					</div>
+				</div>
+			</div>
+			<!--form panels-->
+			<div class="row">
+				<div class="col-12 col-lg-12 m-auto">
+					<form class="multisteps-form__form" action="#" id="wizard">
+						
+						<!--single form panel-->
+						<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+							<div class="inner wizard-one">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>1 من 5 مكتمل</span>
+										<div class="progress">
+											<div class="progress-bar">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>بيانات مقدم الطلب</h2>
+									<p>يرجى أخذ سلفي مع مستندك بحيث يكون مرئيًا بوضوح ولا تغطي الجرعات وجهك.</p>
+								</div>
+								<div class="wizard-content-form">
+									<div class="wizard-form-field">
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" name="name" class="form-control" placeholder="الاسم الأول والاسم الأخير">
+											<label>الاسم الأول والاسم الأخير</label>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="email" class="form-control" name="email" placeholder="عنوان بريد الكتروني">
+											<label>عنوان بريد الكتروني</label>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="phone" placeholder="هاتف">
+													<label>هاتف</label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="education" placeholder="التعليم">
+													<label>التعليم</label>
+												</div>
+											</div>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" class="form-control" name="name" placeholder="اسم الشركة">
+											<label>اسم الشركة</label>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" class="form-control" name="name" placeholder="العنوان السطر 1">
+											<label>العنوان السطر 1</label>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="name" placeholder="مدينة">
+													<label>مدينة</label>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="name" placeholder="الولاية / المقاطعة / المنطقة">
+													<label>الولاية / المقاطعة / المنطقة</label>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="name" placeholder="الرمز البريدي / الرمز البريدي">
+													<label>الرمز البريدي / الرمز البريدي</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-8">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="name" placeholder="رقم الشركة">
+													<label>رقم الشركة</label>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="wizard-form-input position-relative form-group has-float-label">
+													<input type="text" class="form-control" name="name" placeholder="بلد">
+													<label>بلد</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="badge-selection text-right">
+										<h3>أظهر البلد في ملفك الشخصي وشاراتك</h3>
+										<label>
+											<input type="radio" checked="checked" name="radio">
+											<span class="checkmark">نعم</span>
+										</label>
+										<label>
+											<input type="radio" name="radio">
+											<span class="checkmark">لا</span>
+										</label>
+									</div>
+								</div>
+								<div class="wizard-imgbg float-start">
+									<img src="assets/img/v1.png" alt="">
+								</div>
+								<div class="actions">
+									<ul>
+										<li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-left"></i></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--single form panel-->
+						<div class="multisteps-form__panel" data-animation="slideHorz">
+							<div class="inner wizard-two">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>2 من 5 مكتمل</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 45%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>الإقامة الضريبية</h2>
+									<p>أخبرنا عن التفاصيل الضريبية الخاصة بك. هذا مهم لكلينا</p>
+								</div>
+								<div class="wizard-option-list wizard-content-form">
+									<ul>
+										<li>
+											<div class="option-item-list">
+												<select>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+										<li class="nationality-list">
+											<div class="option-item-list">
+												<select>
+													<option>الجنسية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="option-item-list">
+												<select>
+													<option>جنسيات أخرى</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="option-item-list">
+												<select>
+													<option>جنسيات أخرى</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="option-item-list">
+												<select>
+													<option>رقم التعريف الضريبي</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="option-item-list">
+												<select>
+													<option>خاضع للضريبة في الولايات المتحدة؟</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+													<option>المجموعة المهنية</option>
+												</select>
+											</div>
+										</li>
+									</ul>
+									<div class="upload-araa">
+										<div class="upload-text float-end">
+											<span>إثبات شهادة معرف ضريبة NTN الخاصة بك</span>
+										</div>
+										<div class="upload-option text-center float-start">
+											<label for="files">تحميل ملف PDF</label>
+											<input id="files" style="visibility:hidden; display: none;" type="file">
+										</div>
+									</div>
+									<div class="taxable-area">
+										<div class="row">
+											<div class="col-md-4">
+												<label>
+													<input type="checkbox" class="tax-check" checked value="#">
+													<span class="checkbo-box-border"></span>
+													<span class="texable-option">
+														خاضع للضريبة في الولايات المتحدة؟
+													</span>
+												</label>
+											</div>
+											<div class="col-md-4">
+												<label>
+													<input type="checkbox" class="tax-check" value="#">
+													<span class="checkbo-box-border"></span>
+													<span class="texable-option">
+														خاضع للضريبة في الولايات المتحدة؟
+													</span>
+												</label>
+											</div>
+											<div class="col-md-4">
+												<label>
+													<input type="checkbox" class="tax-check" value="#">
+													<span class="checkbo-box-border"></span>
+													<span class="texable-option">
+														خاضع للضريبة في الولايات المتحدة؟
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-imgbg float-start">
+									<img src="assets/img/v2.png" alt="">
+								</div>
+								<div class="actions">
+									<ul>
+										<li><span class="js-btn-prev" title="عودة">عودة <i class="fa fa-arrow-right"></i></span></li>
+										<li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-left"></i></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--single form panel-->
+						<div class="multisteps-form__panel" data-animation="slideHorz">
+							<div class="inner wizard-three">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>3 من 5 مكتمل</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 65%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>وثائق المسافة البادئة</h2>
+									<p>يرجى أخذ سلفي مع مستندك بحيث يكون مرئيًا بوضوح ولا تغطي الجرعات وجهك.</p>
+								</div>
+								<div class="wizard-identity wizard-content-form">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="wizard-identity-box identity-upload text-center">
+												<div class="upload-icon">
+													<i class="fas fa-cloud-upload-alt"></i>
+												</div>
+												<div class="upload-option text-center">
+													<label for="images-files">قم بتحميل المستندات</label>
+													<input id="images-files" style="visibility:hidden; display: none;" type="file">
+													<span>يجب أن يكون حجم .jpg أو .pdf أكبر من 500 كيلوبايت أو 300 بكسل</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wizard-identity-box text-center">
+												<div class="wizard-identity-icon">
+													<img src="assets/img/vi1.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-imgbg float-start">
+									<img src="assets/img/v3.png" alt="">
+								</div>
+								<div class="actions">
+									<ul>
+										<li><span class="js-btn-prev" title="عودة">عودة <i class="fa fa-arrow-right"></i></span></li>
+										<li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-left"></i></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--single form panel-->
+						<div class="multisteps-form__panel" data-animation="slideHorz">
+							<div class="inner wizard-four">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>4 من 5 مكتمل</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 85%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>وثائق المسافة البادئة</h2>
+									<p>يرجى أخذ سلفي مع مستندك بحيث يكون مرئيًا بوضوح ولا تغطي الجرعات وجهك.</p>
+								</div>
+								<div class="identity-option wizard-content-form">
+									<ul>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check" checked="checked">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" class="identity-check">
+												<span class="identity-label"></span>النسبة المئوية لحصص الاستثمار
+												<span class="checkmark-border"></span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="wizard-imgbg float-start">
+									<img src="assets/img/v4.png" alt="">
+								</div>
+								<div class="actions">
+									<ul>
+										<li><span class="js-btn-prev" title="عودة">عودة <i class="fa fa-arrow-right"></i></span></li>
+										<li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-left"></i></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--single form panel-->
+						<div class="multisteps-form__panel" data-animation="slideHorz">
+							<div class="inner wizard-five">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>5 من 5 مكتمل</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 100%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>تقديم النهائي</h2>
+									<p>يرجى أخذ سلفي مع مستندك بحيث يكون مرئيًا بوضوح ولا تغطي الجرعات وجهك.</p>
+								</div>
+								<div class="wizard-submit-file-content wizard-content-form">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="n-summary text-right">
+												<span>ملخص الإخطار</span>
+												<label>
+													<input type="radio" checked="checked" name="radio">
+													<span class="checkmark">نعم</span>
+												</label>
+												<label>
+													<input type="radio" checked="checked" name="radio">
+													<span class="checkmark">نعم</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="n-activity">
+												<label>
+													<span class="n-title text-right">نشاط الشبكة</span>
+													<input type="checkbox" class="net-check">
+													<span class="net-check-border"></span>
+												</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="n-checked text-right">
+												<span>التحدي الإبداعي اليومي</span>
+												<label>
+													<span class="checkmark">إعلانات وعروض خاصة </span>
+													<input type="checkbox">
+												</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="n-checked text-right">
+												<span>التحدي الإبداعي اليومي</span>
+												<label>
+													<span class="checkmark">إعلانات وعروض خاصة </span>
+													<input type="checkbox">
+												</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="n-select-option">
+												<select>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="n-select-option">
+												<select>
+													<option>إشعارات المواهب</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="n-select-option">
+												<select>
+													<option>دعم لأشهر</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+													<option>امنح ساعات</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-imgbg float-start">
+									<img src="assets/img/v5.png" alt="">
+								</div>
+								<div class="actions">
+									<ul>
+										<li><span class="js-btn-prev" title="عودة">عودة <i class="fa fa-arrow-right"></i></span></li>
+										<li><button type="submit" id="submit-form" title="التالى">القمة <i class="fa fa-arrow-left"></i></button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/switch.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		$("#files").change(function() {
+			filename = this.files[0].name
+			console.log(filename);
+		});
+		$('#switch-color .open').on("click", function() {
+			$('#switch-color').toggleClass("open-switcher");
+		});
+	</script>
+</body>
+
+</html>

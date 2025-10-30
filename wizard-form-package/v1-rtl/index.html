@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wizard V1 RTL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="steps-area position-relative">
+            <div class="image-holder">
+                <img src="assets/img/side-img.jpg" alt="">
+            </div>
+            <div class="steps clearfix">
+                <ul class="tablist multisteps-form__progress">
+                    <li class="multisteps-form__progress-btn js-active first done checked" aria-selected="false">
+                        <span>1</span>
+                    </li>
+                    <li class="multisteps-form__progress-btn">
+                        <span>2</span>
+                    </li>
+                    <li class="multisteps-form__progress-btn">
+                        <span>3</span>
+                    </li>
+                    <li class="multisteps-form__progress-btn">
+                        <span>4</span>
+                    </li>
+                    <li class="multisteps-form__progress-btn last">
+                        <span>5</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="multisteps-form__form" action="#" id="wizard">
+            <div class="form-area position-relative">
+                <!-- div 1 -->
+                <div class="multisteps-form__panel js-active" data-animation="animate__bounce">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="form-content pera-content">
+                                <div class="step-inner-content">
+                                    <span class="step-no">الخطوة 1</span>
+                                    <h2>ما نوع الخدمات التي تحتاجها؟</h2>
+                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، مالحة اتخذها الأب أو قرار مرح أو كرة قدم.</p>
+                                    <div class="step-box">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="step-box-content bg-white text-center relative-position active">
+                                                    <span class="step-box-icon">
+                                                        <img src="assets/img/d1.png" alt="">
+                                                    </span>
+                                                    <span class="step-box-text">
+                                                        خدمات للشركات
+                                                    </span>
+                                                    <span class="service-check-option">
+                                                        <span><input type="radio" name="service_name" value="Corporate Services"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="step-box-content bg-white text-center relative-position">
+                                                    <span class="step-box-icon">
+                                                        <img src="assets/img/d2.png" alt="">
+                                                    </span>
+                                                    <span class="step-box-text">
+                                                        خدمات لحسابهم الخاص
+                                                    </span>
+                                                    <span class="service-check-option">
+                                                        <span><input type="radio" name="service_name" value="Freelancing Services"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="step-box-content bg-white text-center relative-position">
+                                                    <span class="step-box-icon">
+                                                        <img src="assets/img/d3.png" alt="">
+                                                    </span>
+                                                    <span class="step-box-text">
+                                                        تطوير
+                                                    </span>
+                                                    <span class="service-check-option">
+                                                        <span><input type="radio" name="service_name" value="Development Services"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="actions">
+                            <ul>
+                                <li class="disable" aria-disabled="true"><span class="js-btn-next" title="NEXT">Backward <i class="fa fa-arrow-right"></i></span></li>
+                                <li><span class="js-btn-next" title="NEXT">التالى <i class="fa fa-arrow-left"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 2 -->
+                <div class="multisteps-form__panel" data-animation="animate__bounce">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="form-content pera-content">
+                                <div class="step-inner-content">
+                                    <span class="step-no bottom-line">الخطوة 2</span>
+                                    <div class="step-progress float-end">
+                                        <span>1 من 5 مكتمل</span>
+                                        <div class="step-progress-bar">
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>ما نوع الخدمات التي تقوم باختبارها؟</h2>
+                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، مالحة اتخذها الأب أو قرار مرح أو كرة قدم.</p>
+                                    <div class="form-inner-area">
+                                        <input type="text" name="full_name" placeholder="الاسم الأول والاسم الأخير" required="">
+                                        <input type="email" name="email" placeholder="عنوان بريد الكتروني" required="">
+                                        <input type="text" name="phone" placeholder="هاتف">
+                                    </div>
+                                    <div class="gender-selection">
+                                        <h3>جنس:</h3>
+                                        <label>
+                                            <input type="radio" checked="checked" name="gender" value="Male" required="">
+                                            <span class="checkmark"></span>الذكر
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="gender" value="Female" required="">
+                                            <span class="checkmark"></span>أنثى
+                                        </label>
+                                    </div>
+                                    <div class="upload-documents">
+                                        <h3>تحميل المستندات:</h3>
+                                        <div class="upload-araa bg-white">
+                                            <div class="upload-icon float-end">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                            </div>
+                                            <div class="upload-text">
+                                                <span>(الملف مقبول: pdf. doc / docx - الحجم الأقصى للملف: 150 كيلو بايت للحد التجريبي)</span>
+                                            </div>
+                                            <div class="upload-option text-center">
+                                                <label for="files">قم بتحميل المستندات</label>
+                                                <input id="files" style="visibility:hidden;" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-right"></i> الى الوراء </span></li>
+                                <li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-left"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 3 -->
+                <div class="multisteps-form__panel" data-animation="animate__bounce">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="form-content pera-content">
+                                <div class="step-inner-content">
+                                    <span class="step-no bottom-line">الخطوه 3</span>
+                                    <div class="step-progress float-end">
+                                        <span>اكتمل 3 من 5</span>
+                                        <div class="step-progress-bar">
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>ما نوع الخدمات التي تحتاجها</h2>
+                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، مالحة اتخذها الأب أو قرار مرح أو كرة قدم.</p>
+                                    <div class="services-select-option">
+                                        <ul>
+                                            <li class="bg-white"><label>تم تصميم الموقع <input type="radio" name="web_service" value="Web Design"></label></li>
+                                            <li class="bg-white"><label>تطوير الشبكة <input type="radio" name="web_service" value="Web Development"></label></li>
+                                            <li class="bg-white"><label>تصميم الرسومات <input type="radio" name="web_service" value="Graphics Design"></label></li>
+                                            <li class="bg-white"><label>تحسين محركات البحث <input type="radio" name="web_service" value="SEO"></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="language-select">
+                                        <p>اريد تصفح المشاريع باللغات التالية: </p>
+                                        <select name="languages">
+                                            <option>الإنجليزية</option>
+                                            <option>عربى</option>
+                                            <option>الأسبانية</option>
+                                            <option>فرنسي</option>
+                                        </select>
+                                    </div>
+                                    <div class="comment-box">
+                                        <p><i class="fas fa-comments"></i> اكتب ملاحظة شيء</p>
+                                        <textarea name="full_comments" placeholder="اكتب هنا"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./inner -->
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-right"></i> الى الوراء </span></li>
+                                <li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-left"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 4 -->
+                <div class="multisteps-form__panel" data-animation="animate__bounce">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="form-content pera-content">
+                                <div class="step-inner-content">
+                                    <span class="step-no bottom-line">الخطوة 4</span>
+                                    <div class="step-progress float-end">
+                                        <span>اكتمل 4 من 5</span>
+                                        <div class="step-progress-bar">
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>ما نوع الخدمات التي تحتاجها</h2>
+                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، مالحة اتخذها الأب أو قرار مرح أو كرة قدم.</p>
+                                    <div class="step-content-area">
+                                        <div class="budget-area">
+                                            <p><i class="fas fa-dollar-sign"></i> ميزانية</p>
+                                            <select name="budget">
+                                                <option>390 دولارًا - 600 دولارًا</option>
+                                                <option>390 دولارًا - 600 دولارًا</option>
+                                                <option>390 دولارًا - 600 دولارًا</option>
+                                                <option>390 دولارًا - 600 دولارًا</option>
+                                                <option>390 دولارًا - 600 دولارًا</option>
+                                            </select>
+                                        </div>
+                                        <div class="budget-area">
+                                            <p><i class="fas fa-comments"></i> الدعم المطلوب</p>
+                                            <select name="support_period">
+                                                <option>من 2 إلى 6 شهور</option>
+                                                <option>من 2 إلى 6 شهور</option>
+                                                <option>من 2 إلى 6 شهور</option>
+                                                <option>من 2 إلى 6 شهور</option>
+                                                <option>من 2 إلى 6 شهور</option>
+                                            </select>
+                                        </div>
+                                        <div class="budget-area">
+                                            <p>التحسين وإمكانية الوصول</p>
+                                            <div class="opti-list">
+                                                <ul class="d-flex">
+                                                    <li class="bg-white active"><input type="checkbox" name="code_opti1" value="Semantic coding" checked="">الترميز الدلالي</li>
+                                                    <li class="bg-white"><input type="checkbox" name="code_opti2" value="Mobile APP">تطبيق جوال</li>
+                                                    <li class="bg-white"><input type="checkbox" name="code_opti3" value="Mobile Design">تصميم الجوال</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="comment-box">
+                                            <p><i class="fas fa-comments"></i> اكتب ملاحظة شيء</p>
+                                            <textarea name="comments-note" placeholder="المحتوى الخاص بك هنا"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-right"></i> BACK </span></li>
+                                <li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-left"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 5 -->
+                <div class="multisteps-form__panel" data-animation="animate__bounce">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="form-content pera-content">
+                                <div class="step-inner-content">
+                                    <span class="step-no bottom-line">الخطوة الخامسة</span>
+                                    <div class="step-progress float-end">
+                                        <span>اكتمل 5 من 5</span>
+                                        <div class="step-progress-bar">
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>أكمل الخطوة النهائية</h2>
+                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، مالحة اتخذها الأب أو قرار مرح أو كرة قدم.</p>
+                                    <div class="step-content-field">
+                                        <div class="date-picker date datepicker">
+                                            <input type="text" name="date" class="form-control">
+                                             <div class="input-group-append"><span>ADD TIME</span></div>
+                                        </div>
+                                        <div class="plan-area">
+                                            <div class="plan-icon-text text-center active">
+                                                <div class="plan-icon">
+                                                    <i class="fas fa-chess-queen"></i>
+                                                </div>
+                                                <div class="plan-text">
+                                                    <h3>خطة غير محدودة</h3>
+                                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، يبدو أنه انقلب</p>
+                                                    <input type="radio" name="your_plan" value="Unlimited Plan" checked="">
+                                                </div>
+                                            </div>
+                                            <div class="plan-icon-text text-center">
+                                                <div class="plan-icon">
+                                                    <i class="fas fa-cubes"></i>
+                                                </div>
+                                                <div class="plan-text">
+                                                    <h3>خطة محدودة</h3>
+                                                    <p>والحجة ممارسة عادية ، يجب أن يبدو أنه انقلب. قال ممارسة كرة القدم خاتمة ، يبدو أنه انقلب</p>
+                                                    <input type="radio" name="your_plan" value="Unlimited Plan">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-box">
+                                            <textarea name="extra-message" placeholder="بعض الملاحظات"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-right"></i> BACK </span></li>
+                                <li><button type="submit" title="NEXT">SUBMIT <i class="fa fa-arrow-left"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+    $("#files").change(function() {
+        filename = this.files[0].name
+        console.log(filename);
+    });
+
+    function UploadFile() {
+        var reader = new FileReader();
+        var file = document.getElementById('attach').files[0];
+        reader.onload = function() {
+            document.getElementById('fileContent').value = reader.result;
+            document.getElementById('filename').value = file.name;
+            document.getElementById('wizard').submit();
+        }
+        reader.readAsDataURL(file);
+    }
+    </script>
+</body>
+
+</html>

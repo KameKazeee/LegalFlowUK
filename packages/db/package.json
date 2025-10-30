@@ -1,0 +1,23 @@
+{
+  "name": "@legalflow/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:migrate": "prisma migrate dev",
+    "seed": "tsx src/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "@types/bcryptjs": "^3.0.0",
+    "bcryptjs": "^3.0.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

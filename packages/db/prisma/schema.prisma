@@ -1,0 +1,163 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+  FREELANCER
+}
+
+enum CaseStatus {
+  NEW
+  ASSIGNED
+  ATTENDED
+  REVIEW
+  READY_FOR_BILLING
+  INVOICE_APPROVED
+  CLOSED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  EXPORTED
+  PAID
+  REJECTED
+}
+
+model User {
+  id         String     @id @default(cuid())
+  email      String     @unique
+  name       String?
+  role       Role       @default(STAFF)
+  phone      String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  Freelancer Freelancer?
+  createdCases Case[]   @relation("case_creator")
+  assignedCases Case[]  @relation("Case_assignedTo")
+  attendances Attendance[]
+  createdDocuments Document[]
+}
+
+model Freelancer {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id])
+  firmName    String?
+  rateScheme  String   @default("STANDARD")
+  mileageRate Decimal  @default(0.45)
+  bankDetails Json?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Client {
+  id           String   @id @default(cuid())
+  firstName    String?
+  lastName     String?
+  dob          DateTime?
+  contactEmail String?
+  contactPhone String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  Cases        Case[]
+}
+
+model Case {
+  id             String      @id @default(cuid())
+  clientId       String?
+  client         Client?     @relation(fields: [clientId], references: [id])
+  dsccRef        String?
+  station        String?
+  area           String?
+  dsccReceivedAt DateTime?
+  dsccDeployedAt DateTime?
+  status         CaseStatus  @default(NEW)
+  assignedToId   String?
+  assignedTo     User?       @relation("Case_assignedTo", fields: [assignedToId], references: [id])
+  createdById    String
+  createdBy      User        @relation("case_creator", fields: [createdById], references: [id])
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  deletedAt      DateTime?
+  Attendances    Attendance[]
+  Documents      Document[]
+  Invoices       Invoice[]
+
+  @@index([status])
+  @@index([dsccRef])
+  @@index([assignedToId])
+}
+
+model Attendance {
+  id          String   @id @default(cuid())
+  caseId      String
+  case        Case     @relation(fields: [caseId], references: [id])
+  repId       String
+  rep         User     @relation(fields: [repId], references: [id])
+  arrivalAt   DateTime?
+  departAt    DateTime?
+  gpsStart    Json?
+  gpsEnd      Json?
+  notes       String?
+  outcomeCode String?
+  claimCode   String?
+  travelFrom  String?
+  travelTo    String?
+  mileageKm   Decimal?
+  parking     Decimal? @default(0)
+  otherDisb   Decimal? @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Document {
+  id          String   @id @default(cuid())
+  caseId      String
+  case        Case     @relation(fields: [caseId], references: [id])
+  title       String
+  type        String
+  storageKey  String
+  version     Int      @default(1)
+  createdById String
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model Invoice {
+  id           String        @id @default(cuid())
+  caseId       String
+  case         Case          @relation(fields: [caseId], references: [id])
+  supplierType String
+  supplierId   String?
+  subtotal     Decimal       @default(0)
+  vat          Decimal       @default(0)
+  total        Decimal       @default(0)
+  status       InvoiceStatus @default(DRAFT)
+  approvedById String?
+  approvedAt   DateTime?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  lines        InvoiceLine[]
+}
+
+model InvoiceLine {
+  id          String  @id @default(cuid())
+  invoiceId   String
+  invoice     Invoice @relation(fields: [invoiceId], references: [id])
+  code        String?
+  description String
+  qty         Decimal @default(1)
+  unitPrice   Decimal @default(0)
+  net         Decimal @default(0)
+}

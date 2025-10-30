@@ -1,0 +1,26 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Turbo / caches
+.next
+out
+coverage
+.DS_Store
+*.log
+pnpm-lock.yaml
+.turbo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Build
+/dist
+/.vercel
+
+# Playwright
+/playwright-report
+/test-results

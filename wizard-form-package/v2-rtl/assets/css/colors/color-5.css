@@ -1,0 +1,28 @@
+.wizard-part-title h3,
+.steps li.current:before, .steps li.checked:before,
+.wizard-content-item h2,
+.wizard-content-item p,
+.badge-selection span, .badge-selection h3,
+.wizard-form-input input::-webkit-input-placeholder,
+.wizard-two .wizard-option-list li .option-item-list select,
+.wizard-two .wizard-option-list .upload-araa .upload-text span,
+.wizard-two .wizard-option-list .upload-araa .upload-option label,
+.wizard-two .wizard-option-list .texable-option,
+.wizard-three .wizard-identity .upload-option label,
+.wizard-four .identity-option li,
+.wizard > .steps li.checked a:after, .wizard > .steps li.current a:after,
+.wizard-five .n-summary span,
+.wizard-five .n-checked span,
+.wizard-five .n-select-option select,
+.wizard-five .n-activity .n-title {
+	color: #e53f51!important;
+}
+.actions li a,
+.wizard-progress .progress .progress-bar,
+.wizard-four .identity-option li label input[type="checkbox"]:checked + .checkmark,
+.steps li.current:after, .steps li.checked:after {
+	background-color: #e53f51!important;
+}
+.wizard > .steps li.checked a, .wizard > .steps li.current a {
+	    border: 2px solid #e53f51!important;
+}

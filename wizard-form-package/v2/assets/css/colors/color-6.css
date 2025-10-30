@@ -1,0 +1,54 @@
+
+/*  - Color Classes
+--------------------------------------------*/
+.red,
+.social-share,
+.services-icon-text:hover .service-no,
+.social-share li a:hover i,
+.qualification-year p,
+.blog-title h3 a:hover,
+.sidebar-nav li a:hover,
+.breadcrumb-item,
+.breadcrumb>.active,
+.breadcrumb>li+li:before,
+.post-title a:hover,
+.categories-list-item li:hover  a {
+	color: #029A83 !important;
+}
+.progress-bar,
+.demon-buttton, .send button,
+.owl-dot.active,
+.owl-dot.active,
+.qualification-text-content:after,
+.resume-qualification-details:hover .qualification-tittle:before,
+.hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom,
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom,
+.scrollup,
+.hobby-name,
+.download-option:hover,
+.music-bg,
+.pagination .active,
+ .pagination>li>a:hover,
+ .categories-list-item li:before {
+	background-color: #029A83 !important;
+}
+
+.qualification-tittle:before,
+.pagination .active,
+ .pagination>li>a:hover {
+	border: 1px solid #029A83;
+}
+.hobby-name:after {
+	border-top: 5px solid #029A83;
+}
+
+.download-option:hover a, .download-option:hover i {
+	color: #fff !important;
+}
+.hello-contact-form input:focus, .contact-info textarea:focus,
+.blog-grid-content .blog-grid-pic-text {
+	border-bottom: 1px solid #029A83;
+}
+.quate-text blockquote {
+	border-left: 10px solid #029A83;
+}

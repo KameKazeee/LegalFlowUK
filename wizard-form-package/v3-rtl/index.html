@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wizard V3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper wizard d-flex clearfix multisteps-form position-relative">
+        <div class="steps order-1 position-relative w-25">
+            <div class="multisteps-form__progress">
+                <span class="multisteps-form__progress-btn js-active" title="Application data"><i class="fa fa-user"></i><span>معلومات شخصية</span></span>
+                <span class="multisteps-form__progress-btn" title="Tax residency"><i class="fa fa-user"></i><span>مؤمن للحلول</span></span>
+                <span class="multisteps-form__progress-btn" title="Indentity documents"><i class="fa fa-user"></i><span>معلومات شخصية</span></span>
+                <span class="multisteps-form__progress-btn" title="Investability"><i class="fa fa-user"></i><span>اختر دفعة</span></span>
+                <span class="multisteps-form__progress-btn" title="Review"><i class="fa fa-user"></i><span>مراجعة </span></span>
+            </div>
+        </div>
+
+        <form class="multisteps-form__form w-75 order-2" action="#" id="wizard">
+
+            <div class="form-area position-relative">
+                <!-- div 1 -->
+                <div class="multisteps-form__panel js-active" data-animation="slideHorz">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="wizard-v3-progress">
+                                <span>من 1 إلى 5 خطوات</span>
+                                <h3>0٪ للإنجاز</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-title text-center">
+                                <h3>من فضلك ، أدخل معلوماتك الشخصية</h3>
+                                <p>منذ فترة. أود أن أقدم لكم المشروع الذي أعمل</p>
+                            </div>
+                            <div class="wizard-photo-area">
+                                <div class="wizard-photo-upload position-relative">
+                                    <label for="files">تحميل الصور</label>
+                                    <input id="files" type="file" onchange="readURL(this);" style="display: none;">
+                                    <div class="display-img text-center">
+                                        <img id="profile-image" src="assets/img/pf1.png" alt="صورتك">
+                                    </div>
+                                </div>
+                                <div class="photo-upload-text">منذ فترة. أود أن أقدم لكم المشروع الذي أعمل على عدد قليل منه
+                                </div>
+                            </div>
+                            <div class="wizard-form-field mb-85">
+                                <div class="wizard-form-input">
+                                    <label>اسم</label>
+                                    <input type="text" name="name">
+                                </div>
+                                <div class="wizard-form-input mb-60">
+                                    <label>البريد الإلكتروني</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="wizard-form-input">
+                                    <label>ماذا تكون؟</label>
+                                    <div class="wizard-checked">
+                                        <label class="checkbox-circle">
+                                            <input type="radio" checked="checked" name="student_type" value="University Student">
+                                            <span class="checkmark"></span>
+                                            طالب جامعي
+                                        </label>
+                                    </div>
+                                    <div class="wizard-checked">
+                                        <label class="checkbox-circle">
+                                            <input type="radio" name="student_type" value="Professional">
+                                            <span class="checkmark"></span>
+                                            المحترفين
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="wizard-form-input">
+                                    <label>جامعة</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="wizard-form-input">
+                                    <label>رائد</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="wizard-form-input mb-60">
+                                    <label>تاريخ التخرج</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="wizard-form-input">
+                                    <label>هل لديك معرف ضريبي؟</label>
+                                    <div class="wizard-checked">
+                                        <label class="checkbox-circle">
+                                            <input type="radio" checked="checked" name="ssn" value="I Have a US Tax ID (SSN)">
+                                            <span class="checkmark"></span>
+                                            <span>لديّ معرّف ضريبي أمريكي (SSN)</span>
+                                        </label>
+                                    </div>
+                                    <div class="wizard-checked">
+                                        <label class="checkbox-circle">
+                                            <input type="radio" name="ssn" value="I Don't have a US Tax ID (SSN)">
+                                            <span class="checkmark"></span>
+                                            <span>ليس لدي معرّف ضريبي أمريكي (SSN)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-field-text">منذ فترة. أود أن أقدم لكم المشروع الذي أعمل عليه منذ بضعة أشهر.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="vector-img-one">
+                            <img src="assets/img/vb1.png" alt="">
+                        </div>
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-right"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 2 -->
+                <div class="multisteps-form__panel" data-animation="slideHorz">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="wizard-v3-progress">
+                                <span>من 2 إلى 5 خطوات</span>
+                                <h3>38٪ للإنجاز</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 38%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-title text-center">
+                                <h3>من فضلك ، أدخل معلوماتك الشخصية</h3>
+                                <p>منذ فترة. أود أن أقدم لكم المشروع الذي أعمل</p>
+                            </div>
+                            <div class="wizard-solution-select">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="option_item">
+                                            <input type="checkbox" class="checkbox">
+                                            <span class="option_inner">
+                                                <span class="tickmark"></span>
+                                                <span class="icon"><img src="assets/img/d1.png" alt=""></span>
+                                                <span class="name">صيانة Minuteman</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="option_item">
+                                            <input type="checkbox" class="checkbox">
+                                            <span class="option_inner">
+                                                <span class="tickmark"></span>
+                                                <span class="icon"><img src="assets/img/d1.png" alt=""></span>
+                                                <span class="name">صيانة Minuteman</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="option_item">
+                                            <input type="checkbox" class="checkbox">
+                                            <span class="option_inner">
+                                                <span class="tickmark"></span>
+                                                <span class="icon"><img src="assets/img/d1.png" alt=""></span>
+                                                <span class="name">صيانة Minuteman</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-note-subject mb-85">
+                                <div class="wizard-form-input select-option-area">
+                                    <label>حدد الموضوع</label>
+                                    <select>
+                                        <option>الموضوع 1</option>
+                                        <option>الموضوع 2</option>
+                                        <option>الموضوع 3</option>
+                                        <option>الموضوع 4</option>
+                                    </select>
+                                </div>
+                                <div class="wizard-form-input">
+                                    <label>اكتب ملا حظة</label>
+                                    <textarea></textarea>
+                                </div>
+                                <div class="wizard-form-input">
+                                    <div class="wizard-checked">
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span>لديّ معرّف ضريبي أمريكي (SSN)</span>
+                                    </div>
+                                    <div class="wizard-checked">
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span>ليس لدي معرّف ضريبي أمريكي (SSN)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="vector-img-one">
+                            <img src="assets/img/vb2.png" alt="">
+                        </div>
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="عودة"><i class="fa fa-arrow-left"></i> عودة </span></li>
+                                <li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-right"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 3 -->
+                <div class="multisteps-form__panel" data-animation="slideHorz">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="wizard-v3-progress">
+                                <span>من 3 إلى 5 خطوات</span>
+                                <h3>59٪ للإنجاز</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 59%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-title text-center">
+                                <h3>من فضلك ، أدخل معلوماتك الشخصية</h3>
+                                <p>منذ فترة. أود أن أقدم لكم المشروع الذي أعمل</p>
+                            </div>
+                            <div class="wizard-form-input select-caret">
+                                <select>
+                                    <option>الموضوع 1</option>
+                                    <option>الموضوع 2</option>
+                                    <option>الموضوع 3</option>
+                                    <option>الموضوع 4</option>
+                                </select>
+                            </div>
+                            <div class="wizard-duration mb-60">
+                                <span class="wizard-sub-text">خدمات المدة</span>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="duration-option">
+                                            <input type="radio" name="duration-service" value="4 weeks" class="d-checkbox">
+                                            <span class="checkbox-circle-tick"></span>
+                                            <span class="duration-box text-center">
+                                                <span class="title">4</span>
+                                                <span>أسابيع</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="duration-option">
+                                            <input type="radio" name="duration-service" value="6 weeks" class="d-checkbox">
+                                            <span class="checkbox-circle-tick"></span>
+                                            <span class="duration-box text-center">
+                                                <span class="title">6</span>
+                                                <span>أسابيع</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="duration-option">
+                                            <input type="radio" name="duration-service" value="9 weeks" class="d-checkbox">
+                                            <span class="checkbox-circle-tick"></span>
+                                            <span class="duration-box text-center">
+                                                <span class="title">9</span>
+                                                <span>أسابيع</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-document-upload mb-60">
+                                <span class="wizard-sub-text">قم بتحميل الوثائق</span>
+                                <div class="custom-file position-relative">
+                                    <input type="file" class="custom-file-input form-control d-none" id="customFile">
+                                    <label class="custom-file-label" for="customFile">تحميل ملف مخصص</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./inner -->
+                        <div class="vector-img-one">
+                            <img src="assets/img/vb3.png" alt="">
+                        </div>
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="عودة"><i class="fa fa-arrow-left"></i> عودة </span></li>
+                                <li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-right"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 4 -->
+                <div class="multisteps-form__panel" data-animation="slideHorz">
+                    <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="wizard-v3-progress">
+                                <span>من 4 إلى 5 خطوات</span>
+                                <h3>79٪ للإنجاز</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 79%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-title text-center">
+                                <h3>اختر مقدم الخدمة</h3>
+                                <p>منذ فترة. أود أن أقدم لكم المشروع الذي أعمل</p>
+                            </div>
+                            <div id="slider-service" class="wizard-service-slide">
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws1.png" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws2.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد جيم
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws3.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد كاتي
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws4.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد الفلاني
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws5.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws6.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد جون
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws1.png" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws2.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws3.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws4.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws5.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="services-box-item">
+                                    <input type="checkbox" name="contact_person" value="Mr Leo" class="service-checkbox">
+                                    <span class="w-service-box text-center position-relative">
+                                        <span class="service-icon">
+                                            <img src="assets/img/ws6.jpg" alt="">
+                                        </span>
+                                        <span class="service-text">
+                                            السيد ليو
+                                        </span>
+                                        <span class="option-seclect">
+                                            <span>المحدد</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="vector-img-one">
+                            <img src="assets/img/vb4.png" alt="">
+                        </div>
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="عودة"><i class="fa fa-arrow-left"></i> عودة </span></li>
+                                <li><span class="js-btn-next" title="التالى">التالى <i class="fa fa-arrow-right"></i></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- div 5 -->
+                <div class="multisteps-form__panel" data-animation="slideHorz">
+                   <div class="wizard-forms">
+                        <div class="inner pb-100 clearfix">
+                            <div class="wizard-v3-progress">
+                                <span>5 إلى 5 خطوات</span>
+                                <h3>100٪ للإنجاز</h3>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-title text-center">
+                                <h3>اختر مقدم الخدمة</h3>
+                                <p>منذ فترة. أود أن أقدم لكم المشروع الذي أعمل</p>
+                            </div>
+                            <div class="wizard-day-item mb-85">
+                                <span class="wizard-sub-text">خدمة التأكيد عن طريق</span>
+                                <div class="wizard-checkbox-option">
+                                    <ul>
+                                        <li>
+                                            <label class="block-option">
+                                                <input type="checkbox" name="day-checkout" class="checked-checkbox">
+                                                <span class="checkbox-tick"></span>
+                                                <span class="day-label">رسالة قصيرة</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="block-option">
+                                                <input type="checkbox" name="day-checkout" class="checked-checkbox">
+                                                <span class="checkbox-tick"></span>
+                                                <span class="day-label">عنوان البريد الالكترونى</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="block-option">
+                                                <input type="checkbox" name="day-checkout" class="checked-checkbox">
+                                                <span class="checkbox-tick"></span>
+                                                <span class="day-label">اتصل بالرقم</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="social-media-find">
+                                <span class="wizard-sub-text">خدمة التأكيد عن طريق</span>
+                                <div class="social-find-caret">
+                                    <select>
+                                        <option>وسائل التواصل الاجتماعي</option>
+                                        <option>وسائل التواصل الاجتماعي</option>
+                                        <option>وسائل التواصل الاجتماعي</option>
+                                        <option>وسائل التواصل الاجتماعي</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                        <div class="vector-img-one position-relative">
+                            <img src="assets/img/vb5.png" alt="">
+                        </div>
+                        <div class="actions">
+                            <ul>
+                                <li><span class="js-btn-prev" title="عودة"><i class="fa fa-arrow-left"></i> عودة </span></li>
+                                <li><button title="التالى">إرسال <i class="fa fa-arrow-right"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#profile-image')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+        $("#customFile").change(function() {
+            filename = this.files[0].name
+        });
+    </script>
+</body>
+
+</html>
