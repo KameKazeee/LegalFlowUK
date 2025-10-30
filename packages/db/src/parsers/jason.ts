@@ -176,12 +176,12 @@ export function parseJasonText(text: string): JasonParsed {
   // Parse known rows
   const block = lines.join("\n");
   const rows = block.match(/(\d{3,4})\s*[\r\n]+(\d{3,4})[\s\S]*?(Travel|Waiting|Attendance)[\s\S]*?([\s\S]*?)(?=\n\d{3,4}|$)/gi) || [];
-  const toD = (hhmm: string) => new Date(`1970-01-01T${hhmm.padStart(4,'0').slice(0,2)}:${hhmm.slice(-2)}:00`);
+  const toD = (hhmm?: string) => hhmm ? new Date(`1970-01-01T${hhmm.padStart(4,'0').slice(0,2)}:${hhmm.slice(-2)}:00`) : null;
   for (const r of rows) {
     const hm = r.match(/(\d{3,4}).*?(\d{3,4})/);
     const cat = /Travel/i.test(r) ? 'TRAVEL' : /Waiting/i.test(r) ? 'WAITING' : /Attendance/i.test(r) ? 'ATTENDANCE' : null;
     const details = r.split(/BRIEF DETAILS/i)[1]?.trim() || r.split(/\n/).slice(0,5).join(' ').slice(0,120) || null;
-    if (hm && cat) entries!.push({ from: toD(hm[1]), to: toD(hm[2]), category: cat as any, details });
+    if (hm && hm[1] && hm[2] && cat) entries!.push({ from: toD(hm[1]), to: toD(hm[2]), category: cat as any, details });
   }
   if (entries!.length) parsed.timeEntries = entries;
 
