@@ -34,13 +34,13 @@ services:
     image: node:20-alpine
     working_dir: /app
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
     env_file:
       - .env
     volumes:
       - ./:/app
     command: >
-      sh -lc "corepack enable && corepack prepare pnpm@9.11.0 --activate && pnpm install --frozen-lockfile=false && pnpm --filter @legalflow/web build && pnpm --filter @legalflow/web start -w"
+      sh -lc "corepack enable && corepack prepare pnpm@9.11.0 --activate && pnpm install --frozen-lockfile=false && pnpm -F @legalflow/db prisma:generate && pnpm -F @legalflow/web build && pnpm -F @legalflow/web start -w"
     ports:
       - '3000:3000'
     depends_on:
